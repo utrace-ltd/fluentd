@@ -53,6 +53,7 @@ COPY config.d /etc/fluent/config.d
 # Expose prometheus metrics.
 EXPOSE 80
 
+ENV FLUENTD_CLUSTER_NAME fluentd
 ENV ELASTICSEARCH_HOST elasticsearch
 ENV ELASTICSEARCH_PORT 9200
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.1
